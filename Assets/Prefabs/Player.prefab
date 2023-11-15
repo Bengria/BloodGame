@@ -24,13 +24,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2737542620067649058}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.19, y: 3.76, z: 1}
   m_LocalScale: {x: 2.1686292, y: 2.1686292, z: 2.1686292}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6356203640030426490}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8648960826915799016
 SpriteRenderer:
@@ -117,14 +117,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6356203640030426487}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.49863845, y: 0.49863845, z: 0.49863845}
+  m_LocalScale: {x: 0.2696984, y: 0.2696984, z: 0.2696984}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8211688490326729512}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &6356203640030426491
 Rigidbody2D:
@@ -143,6 +143,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 3
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -157,11 +163,30 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 8f18e909f6a81c14fb61c5725f88787d, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -4.450764, y: 1.9366236}
-  m_Size: {x: 3.2696419, y: 4.1383543}
+  m_Offset: {x: 0.3946814, y: 0.14450225}
+  m_Size: {x: 8.861685, y: 16.024315}
   m_Direction: 0
 --- !u!114 &8512942333511210195
 MonoBehaviour:
@@ -177,7 +202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clipName: idle_left
   frames:
-  - {fileID: 21300000, guid: 8a6d18c67627ff14ea7aa12636b3dcb6, type: 3}
+  - {fileID: 21300000, guid: 1ed858c4d2cc1f14cb2854e6d812c63c, type: 3}
   fps: 10
   loop: 1
 --- !u!114 &8248760040334133960
@@ -194,9 +219,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clipName: right
   frames:
-  - {fileID: 21300000, guid: b23aeb0f76daa2e40a36e2d77e80e3b2, type: 3}
-  - {fileID: 21300000, guid: 42f25e357b8cac345acf3300bc1bc670, type: 3}
-  - {fileID: 21300000, guid: 43ec6ac1008882342b63ccb3924d06a9, type: 3}
+  - {fileID: 21300000, guid: 1ed858c4d2cc1f14cb2854e6d812c63c, type: 3}
   fps: 6
   loop: 1
 --- !u!114 &6299593830734206145
@@ -213,7 +236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clipName: idle_right
   frames:
-  - {fileID: 21300000, guid: b23aeb0f76daa2e40a36e2d77e80e3b2, type: 3}
+  - {fileID: 21300000, guid: 1ed858c4d2cc1f14cb2854e6d812c63c, type: 3}
   fps: 1
   loop: 1
 --- !u!114 &8005386573833053263
@@ -230,9 +253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clipName: left
   frames:
-  - {fileID: 21300000, guid: 8a6d18c67627ff14ea7aa12636b3dcb6, type: 3}
-  - {fileID: 21300000, guid: a2e4e09aad41c4641bb4f136849f56ed, type: 3}
-  - {fileID: 21300000, guid: 21d8fd221c4c54347b880fb56f1b3fee, type: 3}
+  - {fileID: 21300000, guid: 1ed858c4d2cc1f14cb2854e6d812c63c, type: 3}
   fps: 10
   loop: 1
 --- !u!114 &6356203640030426486
@@ -302,7 +323,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b23aeb0f76daa2e40a36e2d77e80e3b2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1ed858c4d2cc1f14cb2854e6d812c63c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
