@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class GruzMovement : MonoBehaviour
 {
+    public GameObject player;
     public bool isMouseDown = false;
+    public bool withBlod = false;
     // Update is called once per frame
     void Update()
     {
@@ -12,6 +14,9 @@ public class GruzMovement : MonoBehaviour
         cam.z = 10;
         if (isMouseDown)
         {
+            if(!withBlod) {
+                player.GetComponent<XpController>().playerXP -= 10;
+                withBlod = true; }
             gameObject.transform.parent = null;
             gameObject.transform.position = cam;
         }
