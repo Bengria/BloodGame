@@ -42,18 +42,9 @@ public class PlayerDinamic : MonoBehaviour
             animator.SetBool("IsMoving", true);
         }
         if(!jump && moveX == 0 ) animator.SetBool("IsMoving", false);
-        // Прыжок
-        //if (Input.GetButtonDown("Jump") && !jump)
-        //{
-        //    animator.SetBool("IsJumping", true);
-        //    rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
-        //    jump = true;
-            
-        //}
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // Проверка, когда персонаж касается земли
         if (collision.gameObject.CompareTag("Ground"))
         {
             jump = false;
