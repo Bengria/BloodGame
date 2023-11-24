@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class DamagePerson : MonoBehaviour
 {
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        collision.gameObject.GetComponent<XpController>().playerXP -= 10;
-    }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+        if (collision.gameObject.GetComponent<XpController>())
+        {
+            StartCoroutine(SomeCoroutine(collision.gameObject));
+        }
+    }
+    private IEnumerator SomeCoroutine(GameObject player)
     {
-        collision.gameObject.GetComponent<XpController>().playerXP -= 10;
-    }
+        yield return new WaitForSeconds(0.3f);
+        player.GetComponent<XpController>().playerXP -= 10;
+        player.transform.position = new Vector3(-2.76f, -2.89f, 0);
 
+    }
 }

@@ -96,10 +96,6 @@ GameObject:
   - component: {fileID: 2786225410412977998}
   - component: {fileID: 6356203640030426491}
   - component: {fileID: 6356203640030426488}
-  - component: {fileID: 8512942333511210195}
-  - component: {fileID: 8248760040334133960}
-  - component: {fileID: 6299593830734206145}
-  - component: {fileID: 8005386573833053263}
   - component: {fileID: 6356203640030426486}
   - component: {fileID: 6698610567419900301}
   - component: {fileID: 8268176393460735298}
@@ -240,74 +236,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0.3946814, y: 0.14450225}
   m_Size: {x: 8.861685, y: 16.024315}
   m_Direction: 0
---- !u!114 &8512942333511210195
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6356203640030426487}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a0dd698c2b625c4dbf31e62ca0ba97b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clipName: idle_left
-  frames:
-  - {fileID: 21300000, guid: 1ed858c4d2cc1f14cb2854e6d812c63c, type: 3}
-  fps: 10
-  loop: 1
---- !u!114 &8248760040334133960
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6356203640030426487}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a0dd698c2b625c4dbf31e62ca0ba97b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clipName: right
-  frames:
-  - {fileID: 21300000, guid: 1ed858c4d2cc1f14cb2854e6d812c63c, type: 3}
-  fps: 6
-  loop: 1
---- !u!114 &6299593830734206145
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6356203640030426487}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a0dd698c2b625c4dbf31e62ca0ba97b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clipName: idle_right
-  frames:
-  - {fileID: 21300000, guid: 1ed858c4d2cc1f14cb2854e6d812c63c, type: 3}
-  fps: 1
-  loop: 1
---- !u!114 &8005386573833053263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6356203640030426487}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a0dd698c2b625c4dbf31e62ca0ba97b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clipName: left
-  frames:
-  - {fileID: 21300000, guid: 1ed858c4d2cc1f14cb2854e6d812c63c, type: 3}
-  fps: 10
-  loop: 1
 --- !u!114 &6356203640030426486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -334,6 +262,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jump: 0
   isGround: 0
+  moveSpeed: 5
+  jumpForce: 5
 --- !u!114 &8268176393460735298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -346,4 +276,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7be22328c8749e5428e572823c55fc4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fpsScale: 1
