@@ -49,7 +49,7 @@ public class AltarInteract : MonoBehaviour
 
     private IEnumerator SomeCoroutine(GameObject player)
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.01f);
         float xp = player.GetComponent<XpController>().playerXP;
         player.GetComponent<XpController>().playerXP = 100;
         for (int i = 0; i < gruzes.Length; i++)

@@ -199,7 +199,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
@@ -685,7 +685,7 @@ GameObject:
   - component: {fileID: 265739962}
   m_Layer: 0
   m_Name: Square (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1912,6 +1912,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f29885588bbc464290e32b3c4f1773a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 501745907}
+  lamp: {fileID: 1152757249}
 --- !u!1 &805090438 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6356203640030426487, guid: 526928a0155ec4e46a2a1146f33779a5, type: 3}
@@ -2404,7 +2406,7 @@ GameObject:
   - component: {fileID: 974682985}
   m_Layer: 0
   m_Name: Triangle
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2613,7 +2615,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!108 &1152757250
 Light:
   m_ObjectHideFlags: 0
@@ -2626,7 +2628,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0, b: 0, a: 1}
-  m_Intensity: 4.93
+  m_Intensity: 0
   m_Range: 11.201434
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -2703,7 +2705,7 @@ GameObject:
   - component: {fileID: 1176304990}
   m_Layer: 0
   m_Name: Triangle (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2787,7 +2789,7 @@ GameObject:
   - component: {fileID: 1182617934}
   m_Layer: 0
   m_Name: Triangle (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
