@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class GruzMovement : MonoBehaviour
 {
-    public GameObject player;
     public bool isMouseDown = false;
-    public bool withBlod = false;
+    public GameObject player;
+    public bool isWithBlood = false;
     // Update is called once per frame
     void Update()
     {
@@ -14,9 +14,6 @@ public class GruzMovement : MonoBehaviour
         cam.z = 10;
         if (isMouseDown)
         {
-            if(!withBlod) {
-                player.GetComponent<XpController>().playerXP -= 10;
-                withBlod = true; }
             gameObject.transform.parent = null;
             gameObject.transform.position = cam;
         }
@@ -24,6 +21,10 @@ public class GruzMovement : MonoBehaviour
 
     private void OnMouseDown()
     {
+        float xp = player.GetComponent<XpController>().playerXP;
+        if (!isWithBlood) {
+            isWithBlood = true;
+            player.GetComponent<XpController>().playerXP = xp - 10; }
         gameObject.GetComponent<CircleCollider2D>().isTrigger = true;
         isMouseDown = true;
     }
@@ -32,5 +33,12 @@ public class GruzMovement : MonoBehaviour
         gameObject.GetComponent<CircleCollider2D>().isTrigger = false;
         gameObject.GetComponent<Rigidbody2D>().gravityScale = 1;
         isMouseDown = false;
+    }
+
+    public void FirstStay()
+    {
+        gameObject.GetComponent<CircleCollider2D>().isTrigger = true;
+        gameObject.GetComponent<Rigidbody2D>().gravityScale = 0;
+        gameObject.GetComponent<Rigidbody2D>().Sleep();
     }
 }
