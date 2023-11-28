@@ -25,19 +25,19 @@ public class GruzMovement : MonoBehaviour
         if (!isWithBlood) {
             isWithBlood = true;
             player.GetComponent<XpController>().playerXP = xp - 10; }
-        gameObject.GetComponent<CircleCollider2D>().isTrigger = true;
+        gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
         isMouseDown = true;
     }
     private void OnMouseUp()
     {
-        gameObject.GetComponent<CircleCollider2D>().isTrigger = false;
+        gameObject.GetComponent<BoxCollider2D>().isTrigger = false;
         gameObject.GetComponent<Rigidbody2D>().gravityScale = 1;
         isMouseDown = false;
     }
 
     public void FirstStay()
     {
-        gameObject.GetComponent<CircleCollider2D>().isTrigger = true;
+        gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
         gameObject.GetComponent<Rigidbody2D>().gravityScale = 0;
         gameObject.GetComponent<Rigidbody2D>().Sleep();
     }
