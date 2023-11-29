@@ -8,42 +8,45 @@ public class AltarInteract : MonoBehaviour
     public GameObject[] gruzes;
     public Vector3[] posGruzes;
 
-    private void Start()
+
+    public GameObject xpLine;
+    public GameObject ypLine;
+    public Vector3 xpPosLine;
+    public GameObject parentxpLine;
+
+    private GameObject player;
+
+    private bool isCol;
+
+    private void Update()
     {
-        for (int i = 0; i < gruzes.Length; i++)
+        if (Input.GetKeyDown(KeyCode.E) && isCol)
         {
-            posGruzes[i] = gruzes[i].transform.position;
+            StartCoroutine(SomeCoroutine(player.gameObject));
         }
     }
-
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (collision.gameObject.GetComponent<PlayerDinamic>())
         {
-            if (collision.GetComponent<XpController>())
-            {
-                StartCoroutine(SomeCoroutine(collision.gameObject));
-            }
+            isCol = true;
+            player = collision.gameObject;
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (collision.gameObject.GetComponent<PlayerDinamic>())
         {
-            if (collision.GetComponent<XpController>())
-            {
-                StartCoroutine(SomeCoroutine(collision.gameObject));
-            }
+            isCol = true;
+            player = collision.gameObject;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (collision.gameObject.GetComponent<PlayerDinamic>())
         {
-            if (collision.GetComponent<XpController>())
-            {
-                StartCoroutine(SomeCoroutine(collision.gameObject));
-            }
+            isCol = false;
+            player = collision.gameObject;
         }
     }
 
@@ -54,12 +57,16 @@ public class AltarInteract : MonoBehaviour
         player.GetComponent<XpController>().playerXP = 100;
         for (int i = 0; i < gruzes.Length; i++)
         {
-            if (gruzes[i].GetComponent<GruzMovement>())
+            if (gruzes[i].GetComponent<GruzMovement>()) 
+            { 
+                gruzes[i].transform.parent = cam.transform;
                 gruzes[i].GetComponent<GruzMovement>().FirstStay();
-            gruzes[i].transform.parent = cam.transform;
-            gruzes[i].transform.position = posGruzes[i];
-
+                gruzes[i].transform.localPosition = posGruzes[i];
+            }
         }
+        xpLine.transform.parent = parentxpLine.transform;
+        xpLine.transform.localPosition =xpPosLine;
+        ypLine.GetComponent<BoxCollider2D>().enabled = false;
     }
 
     

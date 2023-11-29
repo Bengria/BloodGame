@@ -5,6 +5,11 @@ using UnityEngine;
 public class XPMovement : MonoBehaviour
 {
     public bool isMouseDown = false;
+    public GameObject line;
+    private void Start()
+    {
+        line.GetComponent<BoxCollider2D>().enabled = false;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -19,10 +24,12 @@ public class XPMovement : MonoBehaviour
 
     private void OnMouseDown()
     {
+        line.GetComponent<BoxCollider2D>().enabled = false;
         isMouseDown = true;
     }
     private void OnMouseUp()
     {
-        isMouseDown=false;
+        line.GetComponent<BoxCollider2D>().enabled = true;
+        isMouseDown = false;
     }
 }

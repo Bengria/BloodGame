@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DamagePerson : MonoBehaviour
 {
+    public Vector3 perPos;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -17,7 +18,7 @@ public class DamagePerson : MonoBehaviour
     {
         yield return new WaitForSeconds(0.3f);
         player.GetComponent<XpController>().playerXP -= 10;
-        player.transform.position = new Vector3(-2.76f, -2.89f, 0);
+        player.transform.position = perPos;
 
     }
 }
