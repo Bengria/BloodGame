@@ -18,6 +18,9 @@ public class AltarInteract : MonoBehaviour
 
     private bool isCol;
 
+
+    public GameObject[] forGruses;
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && isCol)
@@ -62,11 +65,16 @@ public class AltarInteract : MonoBehaviour
                 gruzes[i].transform.parent = cam.transform;
                 gruzes[i].GetComponent<GruzMovement>().FirstStay();
                 gruzes[i].transform.localPosition = posGruzes[i];
+                gruzes[i].GetComponent<GruzMovement>().isWithBlood = false;
             }
         }
         xpLine.transform.parent = parentxpLine.transform;
         xpLine.transform.localPosition =xpPosLine;
         ypLine.GetComponent<BoxCollider2D>().enabled = false;
+        for(int i = 0;i < forGruses.Length; i++)
+        {
+            forGruses[i].GetComponent<Cup>().isGruz = false;
+        }
     }
 
     
