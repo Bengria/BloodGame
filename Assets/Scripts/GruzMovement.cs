@@ -22,11 +22,13 @@ public class GruzMovement : MonoBehaviour
     private void OnMouseDown()
     {
         float xp = player.GetComponent<XpController>().playerXP;
-        if (!isWithBlood) {
+        if (!isWithBlood) 
+        {
             isWithBlood = true;
-            player.GetComponent<XpController>().playerXP = xp - 10; }
-        gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
-        isMouseDown = true;
+            player.GetComponent<XpController>().playerXP = xp - 10; 
+            gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
+            isMouseDown = true;
+        }
     }
     private void OnMouseUp()
     {

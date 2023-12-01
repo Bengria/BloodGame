@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class XpController : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class XpController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if(playerXP<=0) SceneManager.LoadScene("scena 2");
         Vector3 scaleXP = xpLine.transform.localScale;
         Vector3 scaXP = xpSphare.transform.localScale;
         scaXP.y = maxLenXP.x * playerXP / 100;

@@ -28,7 +28,7 @@ public class Lamp : MonoBehaviour
         }
         for (int i = 0; i < 3; i++)
         {
-            if (lamp.GetComponent<Light>().intensity <= 5)
+            if (lamp.GetComponent<Light>().intensity <= 1)
             {
                 lamp.GetComponent<Light>().intensity += 1;
                 

@@ -19,6 +19,10 @@ public class AltarInteract : MonoBehaviour
     private bool isCol;
 
 
+    public bool ifOneGruz = false;
+    public GameObject OneGruz;
+
+
     public GameObject[] forGruses;
 
     private void Update()
@@ -26,6 +30,7 @@ public class AltarInteract : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && isCol)
         {
             StartCoroutine(SomeCoroutine(player.gameObject));
+            if(ifOneGruz) OneGruz.GetComponent<isGrusonMe>().isopen = false;
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
@@ -76,6 +81,8 @@ public class AltarInteract : MonoBehaviour
             forGruses[i].GetComponent<Cup>().isGruz = false;
         }
     }
+
+
 
     
 }

@@ -6,6 +6,13 @@ public class isGrusonMe : MonoBehaviour
 {
     public GameObject door;
     public bool isopen = false;
+
+    private Vector3 posdor;
+
+    private void Start()
+    {
+        posdor = door.transform.position;
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Gruz")
@@ -14,7 +21,7 @@ public class isGrusonMe : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        
+        if(!isopen) door.transform.position = posdor;
         if (isopen && door.transform.position.y < 6)
         {
             Vector3 pos = door.transform.position;
